@@ -1,0 +1,51 @@
+@import "tailwindcss";
+
+/* Amalgated Holdings brand colors (branded.md) */
+:root {
+  --brand-primary: #2F6FA3;
+  --brand-primary-hover: #286191;
+  --brand-secondary: #C9CED4;
+  --brand-background: #FFFFFF;
+  --brand-background-alt: #F4F6F8;
+  --brand-text: #3A3F45;
+}
+
+/* Infinite scroll for client logos (single row, continuous) */
+@keyframes client-logo-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-client-logo-scroll {
+  animation: client-logo-scroll 40s linear infinite;
+}
+
+/* Optional: base styles - use clip instead of hidden so sticky nav works */
+html {
+  -webkit-text-size-adjust: 100%;
+}
+body {
+  margin: 0;
+  min-height: 100vh;
+  overflow-x: clip;
+  width: 100%;
+}
+/* Responsive: safe area, tap targets, no horizontal scroll */
+@media (max-width: 639px) {
+  body {
+    padding-left: env(safe-area-inset-left, 0);
+    padding-right: env(safe-area-inset-right, 0);
+  }
+}
+
+/* Prevent horizontal overflow from wide content */
+html {
+  overflow-x: hidden;
+}
+body {
+  min-width: 0;
+}
