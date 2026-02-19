@@ -32,6 +32,7 @@ import brandAwic from '../assets/brand-awic.png'
 import retailHeroImage from '../assets/retail-hero.jpg'
 import assetManagementImage from '../assets/asset-management-section.jpg'
 import ctaBusinessImage from '../assets/cta-business-environment.png'
+import heroVideo from '../assets/AH.mp4'
 
 // Client logos: fetch from assets/ by filename. Only clients with logoFile are shown.
 const clientLogoGlob = import.meta.glob('../assets/*.{png,jpg,jpeg,svg}', { as: 'url', eager: true })
@@ -138,7 +139,7 @@ function HeroSection() {
         loop
         playsInline
       >
-        <source src="/assets/AH.mp4" type="video/mp4" />
+        <source src={heroVideo} type="video/mp4" />
       </video>
 
       <div className="absolute inset-0 bg-linear-to-b from-black/60 via-black/40 to-slate-950/95" />
